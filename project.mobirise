@@ -38,8 +38,9 @@
         "url": "https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i"
       }
     ],
-    "uniqCompNum": 21,
-    "versionPublish": "4.10.6"
+    "uniqCompNum": 22,
+    "versionPublish": "4.10.6",
+    "screenshot": "screenshot.png"
   },
   "pages": {
     "index.html": {
@@ -532,6 +533,40 @@
         {
           "alias": false,
           "_styles": {
+            "background": "@bgColor",
+            "& when (@fullWidth = false)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@gradientBg)": {
+              "background": "linear-gradient(45deg, @bgColor, @color2)"
+            },
+            ".video-block": {
+              "margin": "auto",
+              "& when (@fullWidth)": {
+                "width": "100% !important"
+              }
+            },
+            "@media (max-width: 768px)": {
+              ".video-block": {
+                "width": "100% !important"
+              }
+            }
+          },
+          "_name": "video2",
+          "_customHTML": "<section group=\"Images & Videos\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"4\" step=\"1\" condition=\"fullWidth==false\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"4\" step=\"1\" condition=\"fullWidth==false\">\n    <input type=\"range\" inline title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"100\" step=\"1\" condition=\"fullWidth==false\">\n\n    <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" condition=\"fullWidth==false\">\n    <input type=\"checkbox\" title=\"Gradient\" name=\"gradientBg\" condition=\"fullWidth==false\">\n    <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#149dcc\" condition=\"gradientBg\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n    <figure class=\"mbr-figure align-center\" mbr-class=\"{'container':fullWidth==false}\">\n        <div class=\"video-block\" mbr-style=\"{'width':videoSize+'%'}\">\n            <div mbr-video>\n                <iframe src=\"https://www.youtube.com/watch?v=XLEneyR7m04&feature=youtu.be&loop=1&autoplay=0\"></iframe>\n            </div>\n        </div>\n    </figure>\n</section>",
+          "_anchor": "video2-l",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "rPPFSENaNc",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
             "& when not (@fullScreen)": {
               "padding-top": "(@paddingTop * 15px)",
               "padding-bottom": "(@paddingBottom * 15px)"
@@ -573,11 +608,11 @@
           "_name": "content1",
           "_customHTML": "<section class=\"mbr-section article content1\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"8\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"8\">\n        <input type=\"range\" inline title=\"Width Content\" name=\"widthContent\" min=\"1\" max=\"4\" step=\"1\" value=\"2\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#232323\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article mbr-class=\"{'col-md-6': widthContent == 1, 'col-md-8': widthContent == 2, 'col-md-10': widthContent == 3, 'col-md-12': widthContent == 4}\"><p><b>09.02.2030  09:02 - 18:10\n</b></p><p><b>Green: </b></p><p><b>“Hey, a quick temperature check (hah)... Have you got any updates from today’s board meeting? Withdrawal from the carbon market is running behind schedule. The Aforestation Ministry are saying they need their Saha budgets to be greenlighted by both the Withdrawal Committee and the ECOSOC, and preferably not later than the 12th.”\n</b></p><p><b>Red: </b></p><p><b>“Good morning, comrade. The UN has dutifully dedicated 16 of their ECOSOC economists, who have pleased us with their first interim report today. The decision to start on Saha still needs to be approved by all of the five permanent members of the Security Council, and considering Russia’s recent criticism of Pentagon’s enormous carbon footprint (rightfully deserved), they are fearful that the States might go as far as veto the second phase of Central Siberia Subtraction altogether. Until the voting is carried through, they cannot provide us with the green light to begin the implementation process. However, what I have managed to see in the report looks very promising and corresponds to our estimations quite accurately. As for the Withdrawal Committee, they have now received the policy recommendations package from the Ministry of Natural Resources, and are patiently waiting for the ECOSOC’s final word.”\n</b></p><p><b>Green: </b></p><p><b>“Bless. If the US decides to veto, that will delay our plans for sure, but the global public outcry will make them reconsider. And they will certainly be criticized by their own considering the recent progress made by the #RenewablesForAll movement.  No one will be seeing us as the bad guys anymore. Or at least as long as we commit to the Information Sovereignty agreement. I am surprised we have managed to finish the Western Siberia withdrawal in such a short time. Their reserves are well protected, even despite the chaos of all the recent Defense reorganizations and bureaucratic setbacks.”\n</b></p><p><b>Red: </b></p><p><b>“The smooth withdrawal of the Western Siberia is entirely due to our people’s strength and determination. Their dedication to centralized clean power and willful support of economic militarization is commendable, and is exemplary of this nation’s undying spirit. On our side, we have commited to repay them with planned redistribution, resource sufficiency and emission-free infrastructure.”\n</b></p><p><b><br></b></p></div>\n        </div>\n    </div>\n</section>",
           "_cid": "rPOhA2ouCL",
+          "_anchor": "content1-e",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
-          "_params": {},
-          "_anchor": "content1-e"
+          "_params": {}
         },
         {
           "alias": false,
@@ -623,11 +658,11 @@
           "_name": "content1",
           "_customHTML": "<section class=\"mbr-section article content1\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"8\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"8\">\n        <input type=\"range\" inline title=\"Width Content\" name=\"widthContent\" min=\"1\" max=\"4\" step=\"1\" value=\"2\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#232323\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article mbr-class=\"{'col-md-6': widthContent == 1, 'col-md-8': widthContent == 2, 'col-md-10': widthContent == 3, 'col-md-12': widthContent == 4}\"><p><b>10.04.2030 9:02\n - 11:16</b></p><p><b style=\"font-size: 0.8rem;\">Green: “Good morning. Have you received your news summary already? Der Spiegel published that long read the mole was telling us about, it seems the economic community is universally in favor of our policy and is standing up against the Troika’s recent actions. Since we do not have a formal apology from any of the European Commission high officials, I suggest we accept the EU media as the arbitrators of Europe’s political will for now.”&nbsp;</b></p><p><b>Red: “Indeed, we expected that even if decommodification does not cause aggressive resistance, given the historic precedents, our plans to off-load financialization and commerce will undoubtedly be interpreted as a personal attack. In any case, the Troika’s Ancien Régime is finished, and has been for awhile. Their economic policies belong to the Old world, and are incompatible with the efforts of the civilized society to move in the direction of resource sufficiency and efficiency, of which the Green Red Deal is a prime example.”\n</b></p><p><b>Green: “I believe, the train system served as the last straw, specifically because of the amount of enthusiasm it produced in China. Turning the metro into a virtual supermarket to kick-start our “retail-first production-later” economy will mean a significant transformation for their subtraction plans and will help to restore the environment at least to its pre-collapse levels, if implemented.”\n</b></p><p><b><br></b></p></div>\n        </div>\n    </div>\n</section>",
           "_cid": "rPOk7EXvan",
+          "_anchor": "content1-g",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
-          "_params": {},
-          "_anchor": "content1-g"
+          "_params": {}
         },
         {
           "alias": false,
@@ -718,11 +753,11 @@
           "_name": "image2",
           "_customHTML": "<section group=\"Images & Videos\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"4\" step=\"1\" condition=\"fullWidth==false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"4\" step=\"1\" condition=\"fullWidth==false\">\n\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">        \n        \n        <input type=\"range\" inline title=\"Width\" name=\"imageSize\" min=\"20\" max=\"100\" value=\"100\" step=\"1\" condition=\"fullWidth==false\">\n\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" condition=\"fullWidth==false\">\n        <input type=\"checkbox\" title=\"Gradient\" name=\"gradientBg\" condition=\"fullWidth==false\">\n        <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#149dcc\" condition=\"gradientBg && fullWidth==false\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <figure class=\"mbr-figure\" mbr-class=\"{'container':fullWidth==false}\">\n        <div class=\"image-block\" mbr-style=\"{'width':imageSize+'%'}\">\n            <img src=\"@PROJECT_PATH@/assets/images/untitled-2.001-1920x1080.jpg\" alt=\"Mobirise\" title>\n            <figcaption class=\"mbr-figure-caption mbr-figure-caption-over\" mbr-if=\"showText\">\n                <div mbr-text class=\"pb-5 px-3 mbr-white align-center mbr-fonts-style\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-figure-caption div\"></div>\n            </figcaption>\n        </div>\n    </figure>\n</section>",
           "_cid": "rPOqi0Dnq0",
+          "_anchor": "image2-k",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
-          "_params": {},
-          "_anchor": "image2-k"
+          "_params": {}
         },
         {
           "alias": false,

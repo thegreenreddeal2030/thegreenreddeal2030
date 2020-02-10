@@ -1744,6 +1744,18 @@ body {
 .cid-rPKoXFAGL7 .mbr-section-btn {
   text-align: left;
 }
+.cid-rPPFSENaNc {
+  background: #ffffff;
+}
+.cid-rPPFSENaNc .video-block {
+  margin: auto;
+  width: 100% !important;
+}
+@media (max-width: 768px) {
+  .cid-rPPFSENaNc .video-block {
+    width: 100% !important;
+  }
+}
 .cid-rPKFfMx4Rh {
   background-image: url("../../../assets/images/moscow-2-960x540.png");
 }
